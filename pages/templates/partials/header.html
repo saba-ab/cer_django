@@ -1,0 +1,23 @@
+{% load static %}
+<header>
+    <div class="flex justify-between py-4 px-8 items-center bg-[#141518]">
+        <a href="/">
+            <img class="w-28 h-28" src="{% static 'images/minimalistic_logo.png' %}"
+                 alt="CER - construction equipment rent"/>
+        </a>
+        <nav>
+            <ul class="flex items-center gap-4 text-white text-lg">
+                <li><a class="hover:text-[#a8b9ec] transition-all ease-in-out" href="{% url 'home' %}">მთავარი</a>
+                </li>
+                <li><a class="hover:text-[#a8b9ec] transition-all ease-in-out" href="{% url 'blog' %}">ბლოგი</a>
+                <li><a class="hover:text-[#a8b9ec] transition-all ease-in-out" href="{% url 'about' %}">ჩვენ შესახებ</a>
+                </li>
+                <li><a class="hover:text-[#a8b9ec] transition-all ease-in-out"
+                       href="{% url 'products' %}">პროდუქტები</a></li>
+                <li><a class="hover:text-[#a8b9ec] transition-all ease-in-out"
+                       href="{% url 'services' %}">მომსახურეობა</a></li>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>

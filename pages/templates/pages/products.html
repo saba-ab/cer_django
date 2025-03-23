@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+    <div class="flex flex-col items-center justify-center w-full px-10">
+        <h2 class="text-4xl mt-10">პროდუქტები</h2>
+        <div class="flex flex-col gap-4">
+            <div class="flex justify-center items-center gap-20">
+                <img class="w-[400px]" src="{% static 'images/red-platform.png' %} " alt="suspended platform"/>
+                <div class="flex flex-col gap-4 max-w-[470px]">
+                    <p class="text-lg font-semibold">საფასადე ელექტრო ხარაჩო</p>
+                    <p class="text-sm">
+                        საფასადე ელექტრო ხარაჩო (ლულკა) - აკმაყოფილებს საერთაშორისო
+                        სტანდარტებს, მოყვება სერთიფიკატები. ყველაზე მოქნილი 6 მეტრიანი
+                        არჩევანი ლულკებს შორის, იშლება 1.5, 2 და 2.5 მეტრიან სექციებად.
+                        გამოდგება ნებისმიერი სამუშაოებისათვის სიმაღლეზე.
+                    </p>
+                </div>
+            </div>
+            <div class="flex flex-col gap-4">
+                <div class="flex justify-center gap-20 flex-row-reverse items-center">
+                    <img class="w-[400px]" src="{% static 'images/scaffold-red.png' %}" alt="telescopic scaffold"/>
+                    <div class="flex flex-col gap-4  max-w-[470px]">
+
+                        <p class="text-lg font-semibold">დგარები</p>
+                        <p class="text-sm">
+                            დგარი (სამშენებლო დომკრატი) - მაღალი ხარისხის რკინისგან
+                            დამზადებული ესპანური და იტილიური წარმოების რეგულირებადი დგარები.
+                            იშლება 3.2 3.5 და 4 მეტრზე.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex flex-col gap-4">
+                    <div class="flex justify-center gap-20 items-center">
+                        <img class="w-[400px]"
+                                src="{% static 'images/scaffold-construction.png' %}"
+                                alt="construction scaffold"
+                        />
+                        <div class="flex flex-col gap-4  max-w-[470px]">
+                            <p class="text-lg font-semibold">ხარაჩოები</p>
+                            <p class="text-sm">
+                                კონსტრუქციული და მოძრავი ხარაჩოები - იდეალურია ძნელად მისადგომ
+                                ადგილებში სადაც ელექტრო ხარაჩოს ჩამოკიდება ვერ ხერხდება. სწრაფი
+                                და უსაფრთხო შედეგისათვის.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

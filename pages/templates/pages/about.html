@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+    <div class="flex items-center justify-center w-full bg-[#141518]">
+        <img
+                class="h-[700px] w-screen object-cover  object-bottom"
+                src="{% static 'images/scaffoldings.jpg' %}"
+                alt="logo"
+        />
+        <div class=" z-10 absolute flex flex-col gap-4 right-40 top-1/2 transform -translate-y-1/2 text w-[500px] items-center uppercase  text-[#141518]">
+            <h2 class="text-xl font-bold">ჩვენ შესახებ</h2>
+            <p class="text-lg">
+                CER (Construction Equipment Rent) კომპანია "სიიარი" - არის სანდო
+                ლიდერი სამშენებლო ინვენტარის გაქირავების ინდუსტრიაში. ჩვენ
+                სპეციალიზირებული ვართ მაღალი ხარისხის საფასადე ელექტრო ხარაჩოებით,
+                ასაწყობი ხარაჩოებით და დგარებით უზრუნველყოფაში სამშენებლო
+                პროექტების მრავალფეროვანი საჭიროებების დასაკმაყოფილებლად.
+                უსაფრთხოებისა და მომხმარებელთა კმაყოფილებისადმი მტკიცე
+                ვალდებულებით, ჩვენ მზად ვართ მხარი დავუჭიროთ ყველა ზომის
+                სამშენებლო საქმიანობის წარმატებას.
+            </p>
+        </div>
+    </div>
+{% endblock %}

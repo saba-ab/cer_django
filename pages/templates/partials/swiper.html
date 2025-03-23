@@ -1,0 +1,36 @@
+{% load static %}
+<div class="w-screen h-[500px] flex items-center justify-center relative">
+
+    <div class="swiper h-full w-full">
+        <div class="swiper-wrapper w-full h-full">
+            <div class="swiper-slide w-full h-full">
+                <img class="object-cover  w-full h-full"
+                     src="{% static 'images/swiper_image3.jpeg' %}" alt="ლულკა">
+            </div>
+            <div class="swiper-slide w-full h-full">
+                <img class="object-cover  w-full h-full"
+                     src="{% static 'images/swiper_image1.png' %}"
+                     alt="ხარაჩოები გაქირავება">
+            </div>
+            <div class="swiper-slide w-full h-full">
+                <img class="object-cover w-full h-full"
+                     src="{% static 'images/swiper_image2.png' %}"
+                     alt="ლულკები ქირავდება">
+            </div>
+            <div class="absolute bg-black w-full h-full z-[5] opacity-20"></div>
+            <div class="slogan flex flex-col items-center text-xl justify-center  absolute z-10 text-white left-20 bottom-20">
+                <h1 class="drop-shadow-xl">
+                    გააუმჯობესეთ თქვენი პროექტები CER-თან ერთად
+                </h1>
+                <h1 class="drop-shadow-xl">
+                    სადაც ხარისხს მოაქვს ეფექტურობა
+                </h1>
+            </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+</div>
