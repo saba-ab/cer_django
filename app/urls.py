@@ -14,12 +14,28 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
+from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import TemplateView
+
+from app import settings
+
+from django.contrib.sitemaps.views import sitemap
+from blog.sitemaps import BlogSitemap
+
+sitemaps = {
+    "blogs": BlogSitemap(),
+}
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', include('pages.urls')),
+    path('blog/', include('blog.urls')),
     path("__reload__/", include("django_browser_reload.urls")),
+    path("robots.txt", TemplateView.as_view(template_name="robots.txt", content_type="text/plain")),
+    path("sitemap.xml", sitemap, {"sitemaps": sitemaps}, name="sitemap"),
+
 ]
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

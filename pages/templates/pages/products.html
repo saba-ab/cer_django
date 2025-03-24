@@ -3,10 +3,10 @@
 {% load static %}
 {% block content %}
 
-    <div class="flex flex-col items-center justify-center w-full px-10">
-        <h2 class="text-4xl mt-10">პროდუქტები</h2>
+    <div class="flex flex-col items-center justify-center w-full px-10 mb-5 bg-white">
+        <h2 class="md:text-4xl text-lg mt-10">პროდუქტები</h2>
         <div class="flex flex-col gap-4">
-            <div class="flex justify-center items-center gap-20">
+            <div class="flex flex-wrap justify-center items-center gap-20">
                 <img class="w-[400px]" src="{% static 'images/red-platform.png' %} " alt="suspended platform"/>
                 <div class="flex flex-col gap-4 max-w-[470px]">
                     <p class="text-lg font-semibold">საფასადე ელექტრო ხარაჩო</p>
@@ -19,7 +19,7 @@
                 </div>
             </div>
             <div class="flex flex-col gap-4">
-                <div class="flex justify-center gap-20 flex-row-reverse items-center">
+                <div class="flex flex-wrap justify-center gap-20 flex-row-reverse items-center">
                     <img class="w-[400px]" src="{% static 'images/scaffold-red.png' %}" alt="telescopic scaffold"/>
                     <div class="flex flex-col gap-4  max-w-[470px]">
 
@@ -32,7 +32,7 @@
                     </div>
                 </div>
                 <div class="flex flex-col gap-4">
-                    <div class="flex justify-center gap-20 items-center">
+                    <div class="flex flex-wrap justify-center gap-20 items-center">
                         <img class="w-[400px]"
                                 src="{% static 'images/scaffold-construction.png' %}"
                                 alt="construction scaffold"

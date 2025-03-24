@@ -1,0 +1,17 @@
+<div class="hidden lg:flex  flex-col gap-2">
+    {% for currency in currencies %}
+        <div class="flex items-center gap-4 p-2 border-b border-gray-200 text-white">
+            <img src="{{ currency.currency.iconUrl }}" alt="{{ currency.currency.code }}" class=" h-8">
+            <div class="flex flex-col text-sm">
+                <span class="font-semibold">{{ currency.currency.name }} ({{ currency.currency.code }})</span>
+                <div class="flex gap-2">
+                    <span>{{ currency.rate }}</span>
+
+                    <span class="text-sm {% if currency.diff < 0 %}text-red-500{% else %}text-green-500{% endif %}">
+                        {{ currency.diff }} ({{ currency.percentDiff }}%)
+                        </span>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

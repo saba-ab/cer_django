@@ -1,12 +1,12 @@
 {% load static %}
 <header>
-    <div class="flex justify-between py-4 px-8 items-center bg-[#141518]">
-        <a href="/">
+    <div class="flex  justify-between py-4 px-8 items-center bg-[#141518] fixed top-0 left-0 z-30 w-full ">
+        <a href="{% url 'home' %}">
             <img class="w-28 h-28" src="{% static 'images/minimalistic_logo.png' %}"
                  alt="CER - construction equipment rent"/>
         </a>
-        <nav>
-            <ul class="flex items-center gap-4 text-white text-lg">
+        <nav class="hidden md:block">
+            <ul class="flex items-center gap-6 text-white text-lg">
                 <li><a class="hover:text-[#a8b9ec] transition-all ease-in-out" href="{% url 'home' %}">მთავარი</a>
                 </li>
                 <li><a class="hover:text-[#a8b9ec] transition-all ease-in-out" href="{% url 'blog' %}">ბლოგი</a>
@@ -18,6 +18,9 @@
                        href="{% url 'services' %}">მომსახურეობა</a></li>
                 </li>
             </ul>
+        </nav>
+        <nav class="md:hidden block absolute">
+            {% include 'partials/burger_menu.html' %}
         </nav>
     </div>
 </header>

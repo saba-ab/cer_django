@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="flex bg-[#141518] p-4 lg:p-10">
+        <div class="flex flex-wrap gap-10 md:w-[70%] w-full text-white">
+            {% for blog in page_obj %}
+
+                <div class="border-2 border-white  p-4 rounded-md shadow-md lg:w-[45%]">
+                    <a href="{% url 'detail' blog.slug %}">
+                        {% if blog.photo %}
+                            <img class="w-full h-48 object-cover mt-2" src="{{ blog.photo.url }}"
+                                 alt="{{ blog.title }}">
+                        {% endif %}
+                        <h2 class="text-lg font-semibold">{{ blog.title }}</h2>
+                        <p class="text-sm text-gray-500 mt-2">{{ blog.published_at }}</p>
+                        <p class="mt-2 line-clamp-3">{{ blog.content|truncatewords:30 }}</p>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        {% include 'partials/currencies.html' %}
+    </div>
+
+
+    <div class=" flex justify-center gap-4 bg-[#141518] text-white ">
+        {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}"
+               class="px-4 py-2 bg-[#141518] rounded-md border border-white">Previous</a>
+        {% endif %}
+
+        <span class="px-4 py-2  border rounded-md bg-[#141518]">
+    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+  </span>
+        {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}"
+               class="px-4 py-2 bg-[#141518] rounded-md border border-white">Next</a>
+        {% endif %}
+    </div>
+
+{% endblock %}

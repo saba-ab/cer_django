@@ -9,10 +9,33 @@
     {% tailwind_css %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+    <link rel="canonical" href="{{ request.build_absolute_uri }}">
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+          content="{% block meta_description %}ქირავდება სამშენებლო ტექნიკა, ლულკები, ხარაჩოები, დანგრატი, დომკრატი და სხვა.{% endblock %}">
+    <meta name="keywords"
+          content="მშენებლობა, ლულკები, ლულკა, ხარაჩო, დანგრატი, დომკრატი, ბინები, სახლში, სამშენებლო ტექნიკა">
+    <meta name="author" content="CER Team">
+
+    <!-- Social Meta Tags (optional) -->
+    <!-- Open Graph -->
+    <meta property="og:title" content="{% block og_title %}CER - სამშენებლო ლულკები{% endblock %}">
+    <meta property="og:description"
+          content="{% block og_description %}დაქირავეთ ლულკები, ხარაჩოები და სხვა სამშენებლო ტექნიკა CER-ში.{% endblock %}">
+    <meta property="og:image" content="{% static 'images/minimalistic_logo.png' %}">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="{% static 'images/minimalistic_logo.png' %}">
+    <meta name="twitter:title" content="{% block twitter_title %}CER - სამშენებლო აღჭურვილობა{% endblock %}">
+    <meta name="twitter:description"
+          content="{% block twitter_description %}ყველა საჭირო სამშენებლო ინსტრუმენტი ერთ ადგილას.{% endblock %}">
+    <meta name="twitter:image" content="{% static 'images/minimalistic_logo.png' %}">
 </head>
 <body>
 {% include 'partials/header.html' %}
-<main class="w-full">
+<main class="mt-[144px] w-full">
     {% block content %}{% endblock %}
 </main>
 {% include 'partials/footer.html' %}

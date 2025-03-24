@@ -1,0 +1,35 @@
+<nav role="navigation">
+    <div id="menuToggle">
+        <input type="checkbox" id="menuCheckbox"/>
+        <span></span>
+        <span></span>
+        <span></span>
+        <ul id="menu">
+            <li>
+                <a href="{% url 'home' %}">
+                    <label>მთავარი</label>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'blog' %}">
+                    <label>ბლოგი</label>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'about' %}">
+                    <label>ჩვენ შესახებ</label>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'products' %}">
+                    <label>პროდუქტები</label>
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'services' %}">
+                    <label>მომსახურეობა</label>
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>

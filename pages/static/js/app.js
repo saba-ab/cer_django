@@ -23,3 +23,16 @@ const swiper = new Swiper('.swiper', {
         el: '.swiper-scrollbar',
     },
 });
+
+const burgerMenu = document.getElementById('menu');
+const burgerToggle = document.getElementById('menuCheckbox');
+
+// Close menu when clicking outside
+document.addEventListener('click', function (event) {
+    const isClickInsideMenu = burgerMenu.contains(event.target);
+    const isClickOnToggle = document.getElementById('menuToggle').contains(event.target);
+
+    if (!isClickInsideMenu && !isClickOnToggle) {
+        burgerToggle.checked = false; // uncheck checkbox to close menu
+    }
+});
